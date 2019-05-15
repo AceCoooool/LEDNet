@@ -144,7 +144,7 @@ class Trainer(object):
 
         if args.distributed:
             self.net = torch.nn.parallel.DistributedDataParallel(
-                self.net, device_ids=[args.local_rank], output_device=args.local_rank)
+                self.net, find_unused_parameters=True, device_ids=[args.local_rank], output_device=args.local_rank)
 
         # evaluation metrics
         self.metric = SegmentationMetric(trainset.num_class)
@@ -159,7 +159,7 @@ class Trainer(object):
         end = time.time()
         iteration, max_iter = 0, self.args.max_iter
         save_iter, eval_iter = self.args.per_iter * self.args.save_epoch, self.args.per_iter * self.args.eval_epochs
-        # save_iter, eval_iter = self.args.per_iter * self.args.save_epoch, 10
+        # save_iter, eval_iter = 10, 10
 
         logger.info("Start training, total epochs {:3d} = total iteration: {:6d}".format(self.args.epochs, max_iter))
 

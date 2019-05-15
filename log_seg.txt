@@ -1,0 +1,32 @@
+2019-05-15 21:13:22,707 Segmentation INFO: Using 1 GPUs
+2019-05-15 21:13:22,707 Segmentation INFO: Namespace(base_size=200, batch_size=2, crop_size=200, dataset='citys', device='cuda', distributed=False, dtype='float32', epochs=240, eval_epochs=-1, init_method='env://', local_rank=0, log_step=1, lr=0.0002, momentum=0.9, no_cuda=False, num_gpus=1, ohem=False, resume=None, save_dir='/home/ace/cbb/GitOwn/LEDNet', save_epoch=10, skip_eval=False, start_epoch=0, test_batch_size=1, train_split='train', warmup_factor=0.3333333333333333, warmup_iters=200, weight_decay=0.0001, workers=4)
+2019-05-15 21:13:24,437 Segmentation INFO: Start training, total epochs 240 = total iteration: 356880
+2019-05-15 21:13:25,223 Segmentation INFO: Iteration 000001 , Lr: 0.00007, Cost: 0.79s, Eta: 3 days, 5:51:15, total_loss: 3.180
+2019-05-15 21:13:25,292 Segmentation INFO: Iteration 000002 , Lr: 0.00007, Cost: 0.07s, Eta: 1 day, 18:22:20, total_loss: 3.411
+2019-05-15 21:13:25,355 Segmentation INFO: Iteration 000003 , Lr: 0.00007, Cost: 0.06s, Eta: 1 day, 6:19:49, total_loss: 3.411
+2019-05-15 21:13:25,399 Segmentation INFO: Iteration 000004 , Lr: 0.00007, Cost: 0.04s, Eta: 23:49:15, total_loss: 3.183
+2019-05-15 21:13:25,448 Segmentation INFO: Iteration 000005 , Lr: 0.00007, Cost: 0.05s, Eta: 20:01:59, total_loss: 3.278
+2019-05-15 21:13:25,510 Segmentation INFO: Iteration 000006 , Lr: 0.00007, Cost: 0.06s, Eta: 17:42:54, total_loss: 3.230
+2019-05-15 21:13:25,809 Segmentation INFO: Iteration 000007 , Lr: 0.00007, Cost: 0.30s, Eta: 19:25:33, total_loss: 3.144
+2019-05-15 21:13:26,052 Segmentation INFO: Iteration 000008 , Lr: 0.00007, Cost: 0.24s, Eta: 20:00:36, total_loss: 3.119
+2019-05-15 21:13:26,122 Segmentation INFO: Iteration 000009 , Lr: 0.00007, Cost: 0.07s, Eta: 18:32:29, total_loss: 2.910
+2019-05-15 21:13:26,180 Segmentation INFO: Iteration 000010 , Lr: 0.00007, Cost: 0.06s, Eta: 17:16:41, total_loss: 3.103
+2019-05-15 21:13:26,231 Segmentation INFO: Saved checkpoint to /home/ace/cbb/GitOwn/LEDNet/LEDNet_iter_000010.pth
+2019-05-15 21:13:26,516 Segmentation INFO: Iteration 000011 , Lr: 0.00007, Cost: 0.34s, Eta: 18:43:54, total_loss: 3.312
+2019-05-15 21:13:26,620 Segmentation INFO: Iteration 000012 , Lr: 0.00007, Cost: 0.10s, Eta: 18:01:43, total_loss: 3.281
+2019-05-15 21:13:26,690 Segmentation INFO: Iteration 000013 , Lr: 0.00008, Cost: 0.07s, Eta: 17:10:43, total_loss: 3.301
+2019-05-15 21:13:26,761 Segmentation INFO: Iteration 000014 , Lr: 0.00008, Cost: 0.07s, Eta: 16:27:04, total_loss: 3.156
+2019-05-15 21:13:27,140 Segmentation INFO: Iteration 000015 , Lr: 0.00008, Cost: 0.38s, Eta: 17:51:39, total_loss: 3.210
+2019-05-15 21:13:27,226 Segmentation INFO: Iteration 000016 , Lr: 0.00008, Cost: 0.09s, Eta: 17:16:31, total_loss: 3.289
+2019-05-15 21:13:27,297 Segmentation INFO: Iteration 000017 , Lr: 0.00008, Cost: 0.07s, Eta: 16:40:34, total_loss: 3.030
+2019-05-15 21:13:27,508 Segmentation INFO: Iteration 000018 , Lr: 0.00008, Cost: 0.07s, Eta: 16:54:33, total_loss: 3.348
+2019-05-15 21:13:27,669 Segmentation INFO: Iteration 000019 , Lr: 0.00008, Cost: 0.16s, Eta: 16:51:30, total_loss: 3.327
+2019-05-15 21:13:27,738 Segmentation INFO: Iteration 000020 , Lr: 0.00008, Cost: 0.07s, Eta: 16:21:34, total_loss: 2.980
+2019-05-15 21:13:27,789 Segmentation INFO: Saved checkpoint to /home/ace/cbb/GitOwn/LEDNet/LEDNet_iter_000020.pth
+2019-05-15 21:13:27,848 Segmentation INFO: Iteration 000021 , Lr: 0.00008, Cost: 0.11s, Eta: 16:05:55, total_loss: 3.203
+2019-05-15 21:13:27,914 Segmentation INFO: Iteration 000022 , Lr: 0.00008, Cost: 0.07s, Eta: 15:39:48, total_loss: 3.356
+2019-05-15 21:13:28,019 Segmentation INFO: Iteration 000023 , Lr: 0.00008, Cost: 0.11s, Eta: 15:26:17, total_loss: 3.349
+2019-05-15 21:13:28,081 Segmentation INFO: Iteration 000024 , Lr: 0.00008, Cost: 0.06s, Eta: 15:02:59, total_loss: 3.296
+2019-05-15 21:13:28,123 Segmentation INFO: Iteration 000025 , Lr: 0.00008, Cost: 0.04s, Eta: 14:36:44, total_loss: 3.327
+2019-05-15 21:13:28,179 Segmentation INFO: Iteration 000026 , Lr: 0.00008, Cost: 0.06s, Eta: 14:15:48, total_loss: 3.317
+2019-05-15 21:13:28,667 Segmentation INFO: Iteration 000027 , Lr: 0.00008, Cost: 0.49s, Eta: 15:31:38, total_loss: 3.199

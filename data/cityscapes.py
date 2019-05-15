@@ -109,5 +109,5 @@ class CitySegmentation(SegmentationDataset):
 
 
 if __name__ == '__main__':
-    data = CitySegmentation(split='val', mode='val')
+    data = CitySegmentation(split='val', mode='val', base_size=2048, crop_size=1024)
     print(data[0][0].shape, data[0][0].shape)
