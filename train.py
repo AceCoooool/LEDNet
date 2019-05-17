@@ -144,7 +144,7 @@ class Trainer(object):
 
         if args.distributed:
             self.net = torch.nn.parallel.DistributedDataParallel(
-                self.net, find_unused_parameters=True, device_ids=[args.local_rank], output_device=args.local_rank)
+                self.net, device_ids=[args.local_rank], output_device=args.local_rank)
 
         # evaluation metrics
         self.metric = SegmentationMetric(trainset.num_class)
@@ -230,7 +230,7 @@ class Trainer(object):
             # if i == 10: break
             image, target = image.to(self.device), target.to(self.device)
             with torch.no_grad():
-                outputs = model(image)[0]
+                outputs = model(image)
             self.metric.update(target, outputs)
         return self.metric
 

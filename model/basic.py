@@ -64,7 +64,7 @@ class SSnbt(nn.Module):
     def forward(self, x):
         x1, x2 = x.split(x.shape[1] // 2, 1)
         x1 = self.left(x1)
-        x2 = self.left(x2)
+        x2 = self.right(x2)
         out = torch.cat([x1, x2], 1)
         x = F.relu(out + x)
         return channel_shuffle(x, 2)
@@ -93,7 +93,7 @@ class APN(nn.Module):
         out = F.interpolate(out, size=((h + 3) // 4, (w + 3) // 4), mode='bilinear', align_corners=True)
         out = out + self.branch2(out2)
         out = F.interpolate(out, size=((h + 1) // 2, (w + 1) // 2), mode='bilinear', align_corners=True)
-        out = out + self.branch1(out3)
+        out = out + self.branch3(out3)
         out = F.interpolate(out, size=(h, w), mode='bilinear', align_corners=True)
         out = out * self.branch4(x)
         out = out + self.branch5(x)

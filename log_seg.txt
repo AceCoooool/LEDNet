@@ -1,32 +1,223 @@
-2019-05-15 21:13:22,707 Segmentation INFO: Using 1 GPUs
-2019-05-15 21:13:22,707 Segmentation INFO: Namespace(base_size=200, batch_size=2, crop_size=200, dataset='citys', device='cuda', distributed=False, dtype='float32', epochs=240, eval_epochs=-1, init_method='env://', local_rank=0, log_step=1, lr=0.0002, momentum=0.9, no_cuda=False, num_gpus=1, ohem=False, resume=None, save_dir='/home/ace/cbb/GitOwn/LEDNet', save_epoch=10, skip_eval=False, start_epoch=0, test_batch_size=1, train_split='train', warmup_factor=0.3333333333333333, warmup_iters=200, weight_decay=0.0001, workers=4)
-2019-05-15 21:13:24,437 Segmentation INFO: Start training, total epochs 240 = total iteration: 356880
-2019-05-15 21:13:25,223 Segmentation INFO: Iteration 000001 , Lr: 0.00007, Cost: 0.79s, Eta: 3 days, 5:51:15, total_loss: 3.180
-2019-05-15 21:13:25,292 Segmentation INFO: Iteration 000002 , Lr: 0.00007, Cost: 0.07s, Eta: 1 day, 18:22:20, total_loss: 3.411
-2019-05-15 21:13:25,355 Segmentation INFO: Iteration 000003 , Lr: 0.00007, Cost: 0.06s, Eta: 1 day, 6:19:49, total_loss: 3.411
-2019-05-15 21:13:25,399 Segmentation INFO: Iteration 000004 , Lr: 0.00007, Cost: 0.04s, Eta: 23:49:15, total_loss: 3.183
-2019-05-15 21:13:25,448 Segmentation INFO: Iteration 000005 , Lr: 0.00007, Cost: 0.05s, Eta: 20:01:59, total_loss: 3.278
-2019-05-15 21:13:25,510 Segmentation INFO: Iteration 000006 , Lr: 0.00007, Cost: 0.06s, Eta: 17:42:54, total_loss: 3.230
-2019-05-15 21:13:25,809 Segmentation INFO: Iteration 000007 , Lr: 0.00007, Cost: 0.30s, Eta: 19:25:33, total_loss: 3.144
-2019-05-15 21:13:26,052 Segmentation INFO: Iteration 000008 , Lr: 0.00007, Cost: 0.24s, Eta: 20:00:36, total_loss: 3.119
-2019-05-15 21:13:26,122 Segmentation INFO: Iteration 000009 , Lr: 0.00007, Cost: 0.07s, Eta: 18:32:29, total_loss: 2.910
-2019-05-15 21:13:26,180 Segmentation INFO: Iteration 000010 , Lr: 0.00007, Cost: 0.06s, Eta: 17:16:41, total_loss: 3.103
-2019-05-15 21:13:26,231 Segmentation INFO: Saved checkpoint to /home/ace/cbb/GitOwn/LEDNet/LEDNet_iter_000010.pth
-2019-05-15 21:13:26,516 Segmentation INFO: Iteration 000011 , Lr: 0.00007, Cost: 0.34s, Eta: 18:43:54, total_loss: 3.312
-2019-05-15 21:13:26,620 Segmentation INFO: Iteration 000012 , Lr: 0.00007, Cost: 0.10s, Eta: 18:01:43, total_loss: 3.281
-2019-05-15 21:13:26,690 Segmentation INFO: Iteration 000013 , Lr: 0.00008, Cost: 0.07s, Eta: 17:10:43, total_loss: 3.301
-2019-05-15 21:13:26,761 Segmentation INFO: Iteration 000014 , Lr: 0.00008, Cost: 0.07s, Eta: 16:27:04, total_loss: 3.156
-2019-05-15 21:13:27,140 Segmentation INFO: Iteration 000015 , Lr: 0.00008, Cost: 0.38s, Eta: 17:51:39, total_loss: 3.210
-2019-05-15 21:13:27,226 Segmentation INFO: Iteration 000016 , Lr: 0.00008, Cost: 0.09s, Eta: 17:16:31, total_loss: 3.289
-2019-05-15 21:13:27,297 Segmentation INFO: Iteration 000017 , Lr: 0.00008, Cost: 0.07s, Eta: 16:40:34, total_loss: 3.030
-2019-05-15 21:13:27,508 Segmentation INFO: Iteration 000018 , Lr: 0.00008, Cost: 0.07s, Eta: 16:54:33, total_loss: 3.348
-2019-05-15 21:13:27,669 Segmentation INFO: Iteration 000019 , Lr: 0.00008, Cost: 0.16s, Eta: 16:51:30, total_loss: 3.327
-2019-05-15 21:13:27,738 Segmentation INFO: Iteration 000020 , Lr: 0.00008, Cost: 0.07s, Eta: 16:21:34, total_loss: 2.980
-2019-05-15 21:13:27,789 Segmentation INFO: Saved checkpoint to /home/ace/cbb/GitOwn/LEDNet/LEDNet_iter_000020.pth
-2019-05-15 21:13:27,848 Segmentation INFO: Iteration 000021 , Lr: 0.00008, Cost: 0.11s, Eta: 16:05:55, total_loss: 3.203
-2019-05-15 21:13:27,914 Segmentation INFO: Iteration 000022 , Lr: 0.00008, Cost: 0.07s, Eta: 15:39:48, total_loss: 3.356
-2019-05-15 21:13:28,019 Segmentation INFO: Iteration 000023 , Lr: 0.00008, Cost: 0.11s, Eta: 15:26:17, total_loss: 3.349
-2019-05-15 21:13:28,081 Segmentation INFO: Iteration 000024 , Lr: 0.00008, Cost: 0.06s, Eta: 15:02:59, total_loss: 3.296
-2019-05-15 21:13:28,123 Segmentation INFO: Iteration 000025 , Lr: 0.00008, Cost: 0.04s, Eta: 14:36:44, total_loss: 3.327
-2019-05-15 21:13:28,179 Segmentation INFO: Iteration 000026 , Lr: 0.00008, Cost: 0.06s, Eta: 14:15:48, total_loss: 3.317
-2019-05-15 21:13:28,667 Segmentation INFO: Iteration 000027 , Lr: 0.00008, Cost: 0.49s, Eta: 15:31:38, total_loss: 3.199
+2019-05-17 10:19:39,313 Segmentation INFO: Using 1 GPUs
+2019-05-17 10:19:39,313 Segmentation INFO: Namespace(base_size=540, batch_size=2, crop_size=480, dataset='citys', device='cuda', distributed=False, dtype='float32', epochs=240, eval_epochs=-1, init_method='env://', local_rank=0, log_step=1, lr=0.0001, momentum=0.9, no_cuda=False, num_gpus=1, ohem=False, resume=None, save_dir='/home/ace/cbb/GitOwn/LEDNet', save_epoch=10, skip_eval=False, start_epoch=0, test_batch_size=1, train_split='train', warmup_factor=0.3333333333333333, warmup_iters=200, weight_decay=0.0001, workers=4)
+2019-05-17 10:19:41,184 Segmentation INFO: Start training
+2019-05-17 10:19:42,240 Segmentation INFO: Iteration 000000 , Lr: 0.00010, total_loss: 3.092
+2019-05-17 10:19:42,370 Segmentation INFO: Iteration 000001 , Lr: 0.00010, total_loss: 3.085
+2019-05-17 10:19:42,502 Segmentation INFO: Iteration 000002 , Lr: 0.00010, total_loss: 3.074
+2019-05-17 10:19:42,631 Segmentation INFO: Iteration 000003 , Lr: 0.00010, total_loss: 3.060
+2019-05-17 10:19:42,763 Segmentation INFO: Iteration 000004 , Lr: 0.00010, total_loss: 3.044
+2019-05-17 10:19:42,893 Segmentation INFO: Iteration 000005 , Lr: 0.00010, total_loss: 3.030
+2019-05-17 10:19:43,025 Segmentation INFO: Iteration 000006 , Lr: 0.00010, total_loss: 3.014
+2019-05-17 10:19:43,154 Segmentation INFO: Iteration 000007 , Lr: 0.00010, total_loss: 3.000
+2019-05-17 10:19:43,286 Segmentation INFO: Iteration 000008 , Lr: 0.00010, total_loss: 2.986
+2019-05-17 10:19:43,416 Segmentation INFO: Iteration 000009 , Lr: 0.00010, total_loss: 2.972
+2019-05-17 10:19:43,832 Segmentation INFO: pixAcc: 0.0000, mIoU: 0.0000
+2019-05-17 10:19:43,965 Segmentation INFO: Iteration 000010 , Lr: 0.00010, total_loss: 2.958
+2019-05-17 10:19:44,096 Segmentation INFO: Iteration 000011 , Lr: 0.00010, total_loss: 2.945
+2019-05-17 10:19:44,226 Segmentation INFO: Iteration 000012 , Lr: 0.00010, total_loss: 2.932
+2019-05-17 10:19:44,358 Segmentation INFO: Iteration 000013 , Lr: 0.00010, total_loss: 2.919
+2019-05-17 10:19:44,487 Segmentation INFO: Iteration 000014 , Lr: 0.00010, total_loss: 2.905
+2019-05-17 10:19:44,620 Segmentation INFO: Iteration 000015 , Lr: 0.00010, total_loss: 2.892
+2019-05-17 10:19:44,749 Segmentation INFO: Iteration 000016 , Lr: 0.00010, total_loss: 2.879
+2019-05-17 10:19:44,881 Segmentation INFO: Iteration 000017 , Lr: 0.00010, total_loss: 2.865
+2019-05-17 10:19:45,010 Segmentation INFO: Iteration 000018 , Lr: 0.00010, total_loss: 2.851
+2019-05-17 10:19:45,143 Segmentation INFO: Iteration 000019 , Lr: 0.00010, total_loss: 2.837
+2019-05-17 10:19:45,197 Segmentation INFO: pixAcc: 0.0000, mIoU: 0.0000
+2019-05-17 10:19:45,327 Segmentation INFO: Iteration 000020 , Lr: 0.00010, total_loss: 2.822
+2019-05-17 10:19:45,461 Segmentation INFO: Iteration 000021 , Lr: 0.00010, total_loss: 2.808
+2019-05-17 10:19:45,591 Segmentation INFO: Iteration 000022 , Lr: 0.00010, total_loss: 2.793
+2019-05-17 10:19:45,723 Segmentation INFO: Iteration 000023 , Lr: 0.00010, total_loss: 2.779
+2019-05-17 10:19:45,853 Segmentation INFO: Iteration 000024 , Lr: 0.00010, total_loss: 2.766
+2019-05-17 10:19:45,985 Segmentation INFO: Iteration 000025 , Lr: 0.00010, total_loss: 2.753
+2019-05-17 10:19:46,115 Segmentation INFO: Iteration 000026 , Lr: 0.00010, total_loss: 2.740
+2019-05-17 10:19:46,247 Segmentation INFO: Iteration 000027 , Lr: 0.00010, total_loss: 2.728
+2019-05-17 10:19:46,377 Segmentation INFO: Iteration 000028 , Lr: 0.00010, total_loss: 2.716
+2019-05-17 10:19:46,510 Segmentation INFO: Iteration 000029 , Lr: 0.00010, total_loss: 2.704
+2019-05-17 10:19:46,563 Segmentation INFO: pixAcc: 0.0000, mIoU: 0.0000
+2019-05-17 10:19:46,693 Segmentation INFO: Iteration 000030 , Lr: 0.00010, total_loss: 2.692
+2019-05-17 10:19:46,826 Segmentation INFO: Iteration 000031 , Lr: 0.00010, total_loss: 2.680
+2019-05-17 10:19:46,955 Segmentation INFO: Iteration 000032 , Lr: 0.00010, total_loss: 2.668
+2019-05-17 10:19:47,088 Segmentation INFO: Iteration 000033 , Lr: 0.00010, total_loss: 2.657
+2019-05-17 10:19:47,217 Segmentation INFO: Iteration 000034 , Lr: 0.00010, total_loss: 2.646
+2019-05-17 10:19:47,350 Segmentation INFO: Iteration 000035 , Lr: 0.00010, total_loss: 2.635
+2019-05-17 10:19:47,479 Segmentation INFO: Iteration 000036 , Lr: 0.00010, total_loss: 2.625
+2019-05-17 10:19:47,612 Segmentation INFO: Iteration 000037 , Lr: 0.00010, total_loss: 2.615
+2019-05-17 10:19:47,741 Segmentation INFO: Iteration 000038 , Lr: 0.00010, total_loss: 2.606
+2019-05-17 10:19:47,873 Segmentation INFO: Iteration 000039 , Lr: 0.00010, total_loss: 2.596
+2019-05-17 10:19:47,926 Segmentation INFO: pixAcc: 0.0000, mIoU: 0.0000
+2019-05-17 10:19:48,056 Segmentation INFO: Iteration 000040 , Lr: 0.00010, total_loss: 2.587
+2019-05-17 10:19:48,188 Segmentation INFO: Iteration 000041 , Lr: 0.00010, total_loss: 2.578
+2019-05-17 10:19:48,318 Segmentation INFO: Iteration 000042 , Lr: 0.00010, total_loss: 2.569
+2019-05-17 10:19:48,450 Segmentation INFO: Iteration 000043 , Lr: 0.00010, total_loss: 2.560
+2019-05-17 10:19:48,579 Segmentation INFO: Iteration 000044 , Lr: 0.00010, total_loss: 2.551
+2019-05-17 10:19:48,712 Segmentation INFO: Iteration 000045 , Lr: 0.00010, total_loss: 2.542
+2019-05-17 10:19:48,841 Segmentation INFO: Iteration 000046 , Lr: 0.00010, total_loss: 2.534
+2019-05-17 10:19:48,974 Segmentation INFO: Iteration 000047 , Lr: 0.00010, total_loss: 2.525
+2019-05-17 10:19:49,103 Segmentation INFO: Iteration 000048 , Lr: 0.00010, total_loss: 2.517
+2019-05-17 10:19:49,235 Segmentation INFO: Iteration 000049 , Lr: 0.00010, total_loss: 2.508
+2019-05-17 10:19:49,288 Segmentation INFO: pixAcc: 0.0000, mIoU: 0.0000
+2019-05-17 10:19:49,419 Segmentation INFO: Iteration 000050 , Lr: 0.00010, total_loss: 2.500
+2019-05-17 10:19:49,552 Segmentation INFO: Iteration 000051 , Lr: 0.00010, total_loss: 2.492
+2019-05-17 10:19:49,681 Segmentation INFO: Iteration 000052 , Lr: 0.00010, total_loss: 2.483
+2019-05-17 10:19:49,813 Segmentation INFO: Iteration 000053 , Lr: 0.00010, total_loss: 2.475
+2019-05-17 10:19:49,942 Segmentation INFO: Iteration 000054 , Lr: 0.00010, total_loss: 2.467
+2019-05-17 10:19:50,075 Segmentation INFO: Iteration 000055 , Lr: 0.00010, total_loss: 2.459
+2019-05-17 10:19:50,204 Segmentation INFO: Iteration 000056 , Lr: 0.00010, total_loss: 2.451
+2019-05-17 10:19:50,337 Segmentation INFO: Iteration 000057 , Lr: 0.00010, total_loss: 2.443
+2019-05-17 10:19:50,468 Segmentation INFO: Iteration 000058 , Lr: 0.00010, total_loss: 2.435
+2019-05-17 10:19:50,600 Segmentation INFO: Iteration 000059 , Lr: 0.00010, total_loss: 2.427
+2019-05-17 10:19:50,653 Segmentation INFO: pixAcc: 0.0000, mIoU: 0.0000
+2019-05-17 10:19:50,783 Segmentation INFO: Iteration 000060 , Lr: 0.00010, total_loss: 2.420
+2019-05-17 10:19:50,916 Segmentation INFO: Iteration 000061 , Lr: 0.00010, total_loss: 2.412
+2019-05-17 10:19:51,045 Segmentation INFO: Iteration 000062 , Lr: 0.00010, total_loss: 2.404
+2019-05-17 10:19:51,178 Segmentation INFO: Iteration 000063 , Lr: 0.00010, total_loss: 2.397
+2019-05-17 10:19:51,307 Segmentation INFO: Iteration 000064 , Lr: 0.00010, total_loss: 2.389
+2019-05-17 10:19:51,439 Segmentation INFO: Iteration 000065 , Lr: 0.00010, total_loss: 2.382
+2019-05-17 10:19:51,568 Segmentation INFO: Iteration 000066 , Lr: 0.00010, total_loss: 2.374
+2019-05-17 10:19:51,701 Segmentation INFO: Iteration 000067 , Lr: 0.00010, total_loss: 2.367
+2019-05-17 10:19:51,830 Segmentation INFO: Iteration 000068 , Lr: 0.00010, total_loss: 2.360
+2019-05-17 10:19:51,963 Segmentation INFO: Iteration 000069 , Lr: 0.00010, total_loss: 2.353
+2019-05-17 10:19:52,016 Segmentation INFO: pixAcc: 0.0000, mIoU: 0.0000
+2019-05-17 10:19:52,147 Segmentation INFO: Iteration 000070 , Lr: 0.00010, total_loss: 2.346
+2019-05-17 10:19:52,279 Segmentation INFO: Iteration 000071 , Lr: 0.00010, total_loss: 2.339
+2019-05-17 10:19:52,409 Segmentation INFO: Iteration 000072 , Lr: 0.00010, total_loss: 2.332
+2019-05-17 10:19:52,542 Segmentation INFO: Iteration 000073 , Lr: 0.00010, total_loss: 2.325
+2019-05-17 10:19:52,672 Segmentation INFO: Iteration 000074 , Lr: 0.00010, total_loss: 2.318
+2019-05-17 10:19:52,804 Segmentation INFO: Iteration 000075 , Lr: 0.00010, total_loss: 2.311
+2019-05-17 10:19:52,934 Segmentation INFO: Iteration 000076 , Lr: 0.00010, total_loss: 2.305
+2019-05-17 10:19:53,066 Segmentation INFO: Iteration 000077 , Lr: 0.00010, total_loss: 2.299
+2019-05-17 10:19:53,195 Segmentation INFO: Iteration 000078 , Lr: 0.00010, total_loss: 2.293
+2019-05-17 10:19:53,327 Segmentation INFO: Iteration 000079 , Lr: 0.00010, total_loss: 2.285
+2019-05-17 10:19:53,381 Segmentation INFO: pixAcc: 0.0065, mIoU: 0.0022
+2019-05-17 10:19:53,512 Segmentation INFO: Iteration 000080 , Lr: 0.00010, total_loss: 2.281
+2019-05-17 10:19:53,644 Segmentation INFO: Iteration 000081 , Lr: 0.00010, total_loss: 2.274
+2019-05-17 10:19:53,773 Segmentation INFO: Iteration 000082 , Lr: 0.00010, total_loss: 2.267
+2019-05-17 10:19:53,905 Segmentation INFO: Iteration 000083 , Lr: 0.00010, total_loss: 2.262
+2019-05-17 10:19:54,035 Segmentation INFO: Iteration 000084 , Lr: 0.00010, total_loss: 2.255
+2019-05-17 10:19:54,167 Segmentation INFO: Iteration 000085 , Lr: 0.00010, total_loss: 2.249
+2019-05-17 10:19:54,296 Segmentation INFO: Iteration 000086 , Lr: 0.00010, total_loss: 2.243
+2019-05-17 10:19:54,428 Segmentation INFO: Iteration 000087 , Lr: 0.00010, total_loss: 2.237
+2019-05-17 10:19:54,559 Segmentation INFO: Iteration 000088 , Lr: 0.00010, total_loss: 2.231
+2019-05-17 10:19:54,690 Segmentation INFO: Iteration 000089 , Lr: 0.00010, total_loss: 2.225
+2019-05-17 10:19:54,743 Segmentation INFO: pixAcc: 0.0461, mIoU: 0.0256
+2019-05-17 10:19:54,874 Segmentation INFO: Iteration 000090 , Lr: 0.00010, total_loss: 2.219
+2019-05-17 10:19:55,007 Segmentation INFO: Iteration 000091 , Lr: 0.00010, total_loss: 2.213
+2019-05-17 10:19:55,136 Segmentation INFO: Iteration 000092 , Lr: 0.00010, total_loss: 2.208
+2019-05-17 10:19:55,267 Segmentation INFO: Iteration 000093 , Lr: 0.00010, total_loss: 2.202
+2019-05-17 10:19:55,398 Segmentation INFO: Iteration 000094 , Lr: 0.00010, total_loss: 2.196
+2019-05-17 10:19:55,530 Segmentation INFO: Iteration 000095 , Lr: 0.00010, total_loss: 2.191
+2019-05-17 10:19:55,660 Segmentation INFO: Iteration 000096 , Lr: 0.00010, total_loss: 2.186
+2019-05-17 10:19:55,792 Segmentation INFO: Iteration 000097 , Lr: 0.00010, total_loss: 2.180
+2019-05-17 10:19:55,921 Segmentation INFO: Iteration 000098 , Lr: 0.00010, total_loss: 2.174
+2019-05-17 10:19:56,054 Segmentation INFO: Iteration 000099 , Lr: 0.00010, total_loss: 2.169
+2019-05-17 10:19:56,107 Segmentation INFO: pixAcc: 0.0971, mIoU: 0.0468
+2019-05-17 10:19:56,237 Segmentation INFO: Iteration 000100 , Lr: 0.00010, total_loss: 2.164
+2019-05-17 10:19:56,369 Segmentation INFO: Iteration 000101 , Lr: 0.00010, total_loss: 2.159
+2019-05-17 10:19:56,499 Segmentation INFO: Iteration 000102 , Lr: 0.00010, total_loss: 2.154
+2019-05-17 10:19:56,631 Segmentation INFO: Iteration 000103 , Lr: 0.00010, total_loss: 2.149
+2019-05-17 10:19:56,760 Segmentation INFO: Iteration 000104 , Lr: 0.00010, total_loss: 2.143
+2019-05-17 10:19:56,892 Segmentation INFO: Iteration 000105 , Lr: 0.00010, total_loss: 2.138
+2019-05-17 10:19:57,022 Segmentation INFO: Iteration 000106 , Lr: 0.00010, total_loss: 2.133
+2019-05-17 10:19:57,155 Segmentation INFO: Iteration 000107 , Lr: 0.00010, total_loss: 2.128
+2019-05-17 10:19:57,284 Segmentation INFO: Iteration 000108 , Lr: 0.00010, total_loss: 2.124
+2019-05-17 10:19:57,416 Segmentation INFO: Iteration 000109 , Lr: 0.00010, total_loss: 2.119
+2019-05-17 10:19:57,469 Segmentation INFO: pixAcc: 0.1534, mIoU: 0.0694
+2019-05-17 10:19:57,600 Segmentation INFO: Iteration 000110 , Lr: 0.00010, total_loss: 2.115
+2019-05-17 10:19:57,732 Segmentation INFO: Iteration 000111 , Lr: 0.00010, total_loss: 2.110
+2019-05-17 10:19:57,861 Segmentation INFO: Iteration 000112 , Lr: 0.00010, total_loss: 2.105
+2019-05-17 10:19:57,994 Segmentation INFO: Iteration 000113 , Lr: 0.00010, total_loss: 2.101
+2019-05-17 10:19:58,124 Segmentation INFO: Iteration 000114 , Lr: 0.00010, total_loss: 2.097
+2019-05-17 10:19:58,256 Segmentation INFO: Iteration 000115 , Lr: 0.00010, total_loss: 2.092
+2019-05-17 10:19:58,386 Segmentation INFO: Iteration 000116 , Lr: 0.00010, total_loss: 2.088
+2019-05-17 10:19:58,519 Segmentation INFO: Iteration 000117 , Lr: 0.00010, total_loss: 2.083
+2019-05-17 10:19:58,648 Segmentation INFO: Iteration 000118 , Lr: 0.00010, total_loss: 2.079
+2019-05-17 10:19:58,780 Segmentation INFO: Iteration 000119 , Lr: 0.00010, total_loss: 2.074
+2019-05-17 10:19:58,833 Segmentation INFO: pixAcc: 0.3557, mIoU: 0.0971
+2019-05-17 10:19:58,963 Segmentation INFO: Iteration 000120 , Lr: 0.00010, total_loss: 2.070
+2019-05-17 10:19:59,096 Segmentation INFO: Iteration 000121 , Lr: 0.00010, total_loss: 2.066
+2019-05-17 10:19:59,225 Segmentation INFO: Iteration 000122 , Lr: 0.00010, total_loss: 2.062
+2019-05-17 10:19:59,357 Segmentation INFO: Iteration 000123 , Lr: 0.00010, total_loss: 2.057
+2019-05-17 10:19:59,487 Segmentation INFO: Iteration 000124 , Lr: 0.00010, total_loss: 2.053
+2019-05-17 10:19:59,619 Segmentation INFO: Iteration 000125 , Lr: 0.00010, total_loss: 2.049
+2019-05-17 10:19:59,748 Segmentation INFO: Iteration 000126 , Lr: 0.00010, total_loss: 2.046
+2019-05-17 10:19:59,880 Segmentation INFO: Iteration 000127 , Lr: 0.00010, total_loss: 2.043
+2019-05-17 10:20:00,011 Segmentation INFO: Iteration 000128 , Lr: 0.00010, total_loss: 2.042
+2019-05-17 10:20:00,143 Segmentation INFO: Iteration 000129 , Lr: 0.00010, total_loss: 2.038
+2019-05-17 10:20:00,196 Segmentation INFO: pixAcc: 0.3949, mIoU: 0.1007
+2019-05-17 10:20:00,327 Segmentation INFO: Iteration 000130 , Lr: 0.00010, total_loss: 2.032
+2019-05-17 10:20:00,459 Segmentation INFO: Iteration 000131 , Lr: 0.00010, total_loss: 2.027
+2019-05-17 10:20:00,590 Segmentation INFO: Iteration 000132 , Lr: 0.00010, total_loss: 2.023
+2019-05-17 10:20:00,722 Segmentation INFO: Iteration 000133 , Lr: 0.00010, total_loss: 2.020
+2019-05-17 10:20:00,852 Segmentation INFO: Iteration 000134 , Lr: 0.00010, total_loss: 2.016
+2019-05-17 10:20:00,985 Segmentation INFO: Iteration 000135 , Lr: 0.00010, total_loss: 2.013
+2019-05-17 10:20:01,114 Segmentation INFO: Iteration 000136 , Lr: 0.00010, total_loss: 2.010
+2019-05-17 10:20:01,247 Segmentation INFO: Iteration 000137 , Lr: 0.00010, total_loss: 2.008
+2019-05-17 10:20:01,377 Segmentation INFO: Iteration 000138 , Lr: 0.00010, total_loss: 2.007
+2019-05-17 10:20:01,510 Segmentation INFO: Iteration 000139 , Lr: 0.00010, total_loss: 2.002
+2019-05-17 10:20:01,563 Segmentation INFO: pixAcc: 0.4064, mIoU: 0.1058
+2019-05-17 10:20:01,693 Segmentation INFO: Iteration 000140 , Lr: 0.00010, total_loss: 1.997
+2019-05-17 10:20:01,826 Segmentation INFO: Iteration 000141 , Lr: 0.00010, total_loss: 1.993
+2019-05-17 10:20:01,955 Segmentation INFO: Iteration 000142 , Lr: 0.00010, total_loss: 1.990
+2019-05-17 10:20:02,088 Segmentation INFO: Iteration 000143 , Lr: 0.00010, total_loss: 1.988
+2019-05-17 10:20:02,218 Segmentation INFO: Iteration 000144 , Lr: 0.00010, total_loss: 1.985
+2019-05-17 10:20:02,350 Segmentation INFO: Iteration 000145 , Lr: 0.00010, total_loss: 1.983
+2019-05-17 10:20:02,480 Segmentation INFO: Iteration 000146 , Lr: 0.00010, total_loss: 1.979
+2019-05-17 10:20:02,613 Segmentation INFO: Iteration 000147 , Lr: 0.00010, total_loss: 1.975
+2019-05-17 10:20:02,742 Segmentation INFO: Iteration 000148 , Lr: 0.00010, total_loss: 1.972
+2019-05-17 10:20:02,875 Segmentation INFO: Iteration 000149 , Lr: 0.00010, total_loss: 1.970
+2019-05-17 10:20:02,928 Segmentation INFO: pixAcc: 0.5950, mIoU: 0.1087
+2019-05-17 10:20:03,058 Segmentation INFO: Iteration 000150 , Lr: 0.00010, total_loss: 1.967
+2019-05-17 10:20:03,191 Segmentation INFO: Iteration 000151 , Lr: 0.00010, total_loss: 1.964
+2019-05-17 10:20:03,320 Segmentation INFO: Iteration 000152 , Lr: 0.00010, total_loss: 1.961
+2019-05-17 10:20:03,453 Segmentation INFO: Iteration 000153 , Lr: 0.00010, total_loss: 1.958
+2019-05-17 10:20:03,583 Segmentation INFO: Iteration 000154 , Lr: 0.00010, total_loss: 1.955
+2019-05-17 10:20:03,715 Segmentation INFO: Iteration 000155 , Lr: 0.00010, total_loss: 1.953
+2019-05-17 10:20:03,845 Segmentation INFO: Iteration 000156 , Lr: 0.00010, total_loss: 1.950
+2019-05-17 10:20:03,978 Segmentation INFO: Iteration 000157 , Lr: 0.00010, total_loss: 1.948
+2019-05-17 10:20:04,108 Segmentation INFO: Iteration 000158 , Lr: 0.00010, total_loss: 1.945
+2019-05-17 10:20:04,240 Segmentation INFO: Iteration 000159 , Lr: 0.00010, total_loss: 1.942
+2019-05-17 10:20:04,293 Segmentation INFO: pixAcc: 0.6198, mIoU: 0.1086
+2019-05-17 10:20:04,425 Segmentation INFO: Iteration 000160 , Lr: 0.00010, total_loss: 1.940
+2019-05-17 10:20:04,558 Segmentation INFO: Iteration 000161 , Lr: 0.00010, total_loss: 1.938
+2019-05-17 10:20:04,687 Segmentation INFO: Iteration 000162 , Lr: 0.00010, total_loss: 1.935
+2019-05-17 10:20:04,819 Segmentation INFO: Iteration 000163 , Lr: 0.00010, total_loss: 1.932
+2019-05-17 10:20:04,949 Segmentation INFO: Iteration 000164 , Lr: 0.00010, total_loss: 1.930
+2019-05-17 10:20:05,082 Segmentation INFO: Iteration 000165 , Lr: 0.00010, total_loss: 1.927
+2019-05-17 10:20:05,212 Segmentation INFO: Iteration 000166 , Lr: 0.00010, total_loss: 1.924
+2019-05-17 10:20:05,345 Segmentation INFO: Iteration 000167 , Lr: 0.00010, total_loss: 1.921
+2019-05-17 10:20:05,475 Segmentation INFO: Iteration 000168 , Lr: 0.00010, total_loss: 1.919
+2019-05-17 10:20:05,608 Segmentation INFO: Iteration 000169 , Lr: 0.00010, total_loss: 1.917
+2019-05-17 10:20:05,661 Segmentation INFO: pixAcc: 0.7063, mIoU: 0.1082
+2019-05-17 10:20:05,791 Segmentation INFO: Iteration 000170 , Lr: 0.00010, total_loss: 1.915
+2019-05-17 10:20:05,924 Segmentation INFO: Iteration 000171 , Lr: 0.00010, total_loss: 1.913
+2019-05-17 10:20:06,054 Segmentation INFO: Iteration 000172 , Lr: 0.00010, total_loss: 1.911
+2019-05-17 10:20:06,186 Segmentation INFO: Iteration 000173 , Lr: 0.00010, total_loss: 1.908
+2019-05-17 10:20:06,316 Segmentation INFO: Iteration 000174 , Lr: 0.00010, total_loss: 1.906
+2019-05-17 10:20:06,448 Segmentation INFO: Iteration 000175 , Lr: 0.00010, total_loss: 1.903
+2019-05-17 10:20:06,579 Segmentation INFO: Iteration 000176 , Lr: 0.00010, total_loss: 1.901
+2019-05-17 10:20:06,711 Segmentation INFO: Iteration 000177 , Lr: 0.00010, total_loss: 1.898
+2019-05-17 10:20:06,841 Segmentation INFO: Iteration 000178 , Lr: 0.00010, total_loss: 1.895
+2019-05-17 10:20:06,973 Segmentation INFO: Iteration 000179 , Lr: 0.00010, total_loss: 1.893
+2019-05-17 10:20:07,026 Segmentation INFO: pixAcc: 0.7106, mIoU: 0.1104
+2019-05-17 10:20:07,156 Segmentation INFO: Iteration 000180 , Lr: 0.00010, total_loss: 1.891
+2019-05-17 10:20:07,288 Segmentation INFO: Iteration 000181 , Lr: 0.00010, total_loss: 1.889
+2019-05-17 10:20:07,419 Segmentation INFO: Iteration 000182 , Lr: 0.00010, total_loss: 1.888
+2019-05-17 10:20:07,552 Segmentation INFO: Iteration 000183 , Lr: 0.00010, total_loss: 1.886
+2019-05-17 10:20:07,681 Segmentation INFO: Iteration 000184 , Lr: 0.00010, total_loss: 1.884
+2019-05-17 10:20:07,814 Segmentation INFO: Iteration 000185 , Lr: 0.00010, total_loss: 1.880
+2019-05-17 10:20:07,943 Segmentation INFO: Iteration 000186 , Lr: 0.00010, total_loss: 1.877
+2019-05-17 10:20:08,076 Segmentation INFO: Iteration 000187 , Lr: 0.00010, total_loss: 1.875
+2019-05-17 10:20:08,206 Segmentation INFO: Iteration 000188 , Lr: 0.00010, total_loss: 1.873
+2019-05-17 10:20:08,339 Segmentation INFO: Iteration 000189 , Lr: 0.00010, total_loss: 1.871
+2019-05-17 10:20:08,391 Segmentation INFO: pixAcc: 0.7218, mIoU: 0.1151
+2019-05-17 10:20:08,522 Segmentation INFO: Iteration 000190 , Lr: 0.00010, total_loss: 1.869
+2019-05-17 10:20:08,655 Segmentation INFO: Iteration 000191 , Lr: 0.00010, total_loss: 1.867
+2019-05-17 10:20:08,785 Segmentation INFO: Iteration 000192 , Lr: 0.00010, total_loss: 1.865
+2019-05-17 10:20:08,917 Segmentation INFO: Iteration 000193 , Lr: 0.00010, total_loss: 1.862
+2019-05-17 10:20:09,048 Segmentation INFO: Iteration 000194 , Lr: 0.00010, total_loss: 1.860
+2019-05-17 10:20:09,180 Segmentation INFO: Iteration 000195 , Lr: 0.00010, total_loss: 1.857
+2019-05-17 10:20:09,310 Segmentation INFO: Iteration 000196 , Lr: 0.00010, total_loss: 1.855
+2019-05-17 10:20:09,442 Segmentation INFO: Iteration 000197 , Lr: 0.00010, total_loss: 1.853
+2019-05-17 10:20:09,572 Segmentation INFO: Iteration 000198 , Lr: 0.00010, total_loss: 1.851
+2019-05-17 10:20:09,704 Segmentation INFO: Iteration 000199 , Lr: 0.00010, total_loss: 1.850
+2019-05-17 10:20:09,757 Segmentation INFO: pixAcc: 0.6471, mIoU: 0.1135
