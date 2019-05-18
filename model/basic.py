@@ -30,7 +30,7 @@ class DownSampling(nn.Module):
     def __init__(self, in_channel):
         super(DownSampling, self).__init__()
         self.conv = nn.Conv2d(in_channel, in_channel, 3, stride=2, padding=1)
-        self.pool = nn.MaxPool2d(2)
+        self.pool = nn.MaxPool2d(2, ceil_mode=True)
 
     def forward(self, x):
         x1 = self.conv(x)

@@ -1,5 +1,7 @@
 # LEDNet
-This is an unofficial implement of  [LEDNet](https://arxiv.org/abs/1905.02423).
+This is an unofficial implement of  [LEDNet](https://arxiv.org/abs/1905.02423). 
+
+> the official version：[LEDNet-official](https://github.com/xiaoyufenfei/LEDNet)
 
 ## Environment
 
@@ -13,8 +15,15 @@ This is an unofficial implement of  [LEDNet](https://arxiv.org/abs/1905.02423).
 | Model  | Paper | OHEM | Epoch | val (crop)  |     val     |
 | :----: | :---: | :--: | :---: | :---------: | :---------: |
 | LEDNet |   /   |  ✗   |  240  | 44.67/91.85 | 49.79/91.31 |
+| LEDNet |   /   |  ✗   | 1000  | 53.77/93.45 | 59.04/93.27 |
+
+- Base Size 1356, Crop Size 1024, only fine.
+
+
 
 > The paper only provide the test results: 69.2/86.8 (class mIoU/category mIoU)
+>
+> - reference the [Fast-SCNN](), we choose epoch=1000
 
 
 

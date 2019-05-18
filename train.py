@@ -29,9 +29,9 @@ def parse_args():
                         help='dataset name (default: citys)')
     parser.add_argument('--workers', '-j', type=int, default=4,
                         metavar='N', help='dataloader threads')
-    parser.add_argument('--base-size', type=int, default=200,  # 540, 1024
+    parser.add_argument('--base-size', type=int, default=1366,  # 540, 1024
                         help='base image size')
-    parser.add_argument('--crop-size', type=int, default=200,  # 480, 768
+    parser.add_argument('--crop-size', type=int, default=1024,  # 480, 768
                         help='crop image size')
     parser.add_argument('--train-split', type=str, default='train',
                         help='dataset train split (default: train)')

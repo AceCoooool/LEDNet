@@ -28,6 +28,6 @@ class LEDNet(nn.Module):
 if __name__ == '__main__':
     net = LEDNet(21)
     import torch
-    a = torch.randn(2, 3, 1024, 512)
+    a = torch.randn(2, 3, 554, 253)
     out = net(a)
     print(out.shape)

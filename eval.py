@@ -33,7 +33,8 @@ def parse_args():
     parser.add_argument('--crop-size', type=int, default=768,
                         help='crop image size')
 
-    parser.add_argument('--pretrained', type=str, default='./LEDNet_iter_011040.pth',
+    parser.add_argument('--pretrained', type=str,
+                        default='/home/ace/cbb/own/pretrained/seg/lednet/LEDNet_iter_046000.pth',
                         help='Default Pre-trained model root.')
 
     # device
