@@ -26,24 +26,20 @@ def basic_conv(in_channel, channel, kernel=3, stride=1):
 
 
 # basic module
-# TODO: may add bn and relu
 class DownSampling(nn.Module):
-    def __init__(self, in_channel, out_channel):
+    def __init__(self, in_channel):
         super(DownSampling, self).__init__()
-        self.conv = nn.Conv2d(in_channel, out_channel, 3, stride=2, padding=1)
+        self.conv = nn.Conv2d(in_channel, in_channel, 3, stride=2, padding=1)
         self.pool = nn.MaxPool2d(2, ceil_mode=True)
-        self.bn = nn.BatchNorm2d(out_channel + in_channel)
 
     def forward(self, x):
         x1 = self.conv(x)
         x2 = self.pool(x)
-        x = torch.cat([x1, x2], dim=1)
-        x = F.relu_(self.bn(x))
-        return x
+        return torch.cat([x1, x2], dim=1)
 
 
 class SSnbt(nn.Module):
-    def __init__(self, channel, dilate=1, drop_prob=0.01):
+    def __init__(self, channel, dilate=1):
         super(SSnbt, self).__init__()
         channel = channel // 2
         self.left = nn.Sequential(
@@ -53,8 +49,7 @@ class SSnbt(nn.Module):
             nn.Conv2d(channel, channel, (3, 1), (1, 1), (dilate, 0), dilation=(dilate, 1)),
             nn.ReLU(inplace=True),
             nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, dilate), dilation=(1, dilate), bias=False),
-            nn.BatchNorm2d(channel), nn.ReLU(inplace=True),
-            nn.Dropout2d(drop_prob)
+            nn.BatchNorm2d(channel), nn.ReLU(inplace=True)
         )
         self.right = nn.Sequential(
             nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, 1)), nn.ReLU(inplace=True),
@@ -63,8 +58,7 @@ class SSnbt(nn.Module):
             nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, dilate), dilation=(1, dilate)),
             nn.ReLU(inplace=True),
             nn.Conv2d(channel, channel, (3, 1), (1, 1), (dilate, 0), dilation=(dilate, 1), bias=False),
-            nn.BatchNorm2d(channel), nn.ReLU(inplace=True),
-            nn.Dropout2d(drop_prob)
+            nn.BatchNorm2d(channel), nn.ReLU(inplace=True)
         )
 
     def forward(self, x):

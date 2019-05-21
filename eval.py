@@ -28,13 +28,13 @@ def parse_args():
                         help='Select val|test, evaluate in val or test data')
     parser.add_argument('--mode', type=str, default='testval',
                         help='Select testval|val, w/o corp and with crop')
-    parser.add_argument('--base-size', type=int, default=1024,
+    parser.add_argument('--height', type=int, default=1024,
                         help='base image size')
-    parser.add_argument('--crop-size', type=int, default=768,
+    parser.add_argument('--width', type=int, default=512,
                         help='crop image size')
 
     parser.add_argument('--pretrained', type=str,
-                        default='/home/ace/cbb/own/pretrained/seg/lednet/LEDNet_iter_046000.pth',
+                        default='/home/ace/cbb/own/pretrained/seg/lednet/LEDNet_iter_013800.pth',
                         help='Default Pre-trained model root.')
 
     # device
@@ -86,7 +86,7 @@ if __name__ == '__main__':
         transforms.Normalize([.485, .456, .406], [.229, .224, .225]),
     ])
 
-    data_kwargs = {'base_size': args.base_size, 'crop_size': args.crop_size, 'transform': input_transform}
+    data_kwargs = {'width': args.width, 'height': args.height, 'transform': input_transform}
 
     val_dataset = get_segmentation_dataset(args.dataset, split=args.split, mode=args.mode, **data_kwargs)
     sampler = make_data_sampler(val_dataset, False, distributed)

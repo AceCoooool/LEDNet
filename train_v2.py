@@ -29,9 +29,9 @@ def parse_args():
                         help='dataset name (default: citys)')
     parser.add_argument('--workers', '-j', type=int, default=4,
                         metavar='N', help='dataloader threads')
-    parser.add_argument('--base-size', type=int, default=1024,  # 1024
+    parser.add_argument('--height', type=int, default=512,  # 1024
                         help='base image size')
-    parser.add_argument('--crop-size', type=int, default=768,  # 512
+    parser.add_argument('--width', type=int, default=256,  # 512
                         help='crop image size')
     parser.add_argument('--train-split', type=str, default='train',
                         help='dataset train split (default: train)')
@@ -95,8 +95,8 @@ class Trainer(object):
             transforms.Normalize([.485, .456, .406], [.229, .224, .225]),
         ])
         # dataset and dataloader
-        data_kwargs = {'transform': input_transform, 'base_size': args.base_size,
-                       'crop_size': args.crop_size}
+        data_kwargs = {'transform': input_transform, 'height': args.height,
+                       'width': args.width}
         trainset = get_segmentation_dataset(
             args.dataset, split=args.train_split, mode='train', **data_kwargs)
         args.per_iter = len(trainset) // (args.num_gpus * args.batch_size)

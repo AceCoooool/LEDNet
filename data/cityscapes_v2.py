@@ -87,7 +87,7 @@ class CitySegmentation(SegmentationDataset):
             return img, os.path.basename(self.images[index])
         # mask = self.masks[index]
         mask = Image.open(self.mask_paths[index])
-        # synchrosized transform
+        # transform
         if self.mode == 'train':
             img, mask = self._sync_transform(img, mask)
         elif self.mode == 'val':
@@ -109,5 +109,5 @@ class CitySegmentation(SegmentationDataset):
 
 
 if __name__ == '__main__':
-    data = CitySegmentation(split='val', mode='val')
+    data = CitySegmentation(split='val', mode='val', height=1024, width=512)
     print(data[0][0].shape, data[0][0].shape)
