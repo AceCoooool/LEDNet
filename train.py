@@ -29,12 +29,14 @@ def parse_args():
                         help='dataset name (default: citys)')
     parser.add_argument('--workers', '-j', type=int, default=4,
                         metavar='N', help='dataloader threads')
-    parser.add_argument('--base-size', type=int, default=1024,  # 1024
+    parser.add_argument('--base-size', type=int, default=512,  # 1024
                         help='base image size')
-    parser.add_argument('--crop-size', type=int, default=768,  # 512
+    parser.add_argument('--crop-size', type=int, default=360,  # 512
                         help='crop image size')
     parser.add_argument('--train-split', type=str, default='train',
                         help='dataset train split (default: train)')
+    parser.add_argument('--drop-rate', type=float, default=0.3,
+                        help='drop rate of SSnbt')
     # training hyper params
     parser.add_argument('--ohem', type=ptutil.str2bool, default='false',
                         help='whether using ohem loss')
@@ -117,7 +119,7 @@ class Trainer(object):
                                                 num_workers=args.workers, pin_memory=True)
 
         # create network
-        self.net = LEDNet(trainset.NUM_CLASS)
+        self.net = LEDNet(trainset.NUM_CLASS, args.drop_rate)
 
         if args.distributed:
             self.net = torch.nn.SyncBatchNorm.convert_sync_batchnorm(self.net)

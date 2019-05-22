@@ -4,13 +4,13 @@ from model.basic import DownSampling, SSnbt, APN
 
 
 class LEDNet(nn.Module):
-    def __init__(self, nclass):
+    def __init__(self, nclass, drop=0.1):
         super(LEDNet, self).__init__()
         self.encoder = nn.Sequential(
-            DownSampling(3, 29), SSnbt(32), SSnbt(32), SSnbt(32),
-            DownSampling(32, 32), SSnbt(64), SSnbt(64),
-            DownSampling(64, 64), SSnbt(128, 1, 0.1), SSnbt(128, 2, 0.1), SSnbt(128, 5, 0.1),
-            SSnbt(128, 9, 0.1), SSnbt(128, 2, 0.1), SSnbt(128, 5, 0.1), SSnbt(128, 9, 0.1), SSnbt(128, 17, 0.1)
+            DownSampling(3, 29), SSnbt(32, 1, 0.1 * drop), SSnbt(32, 1, 0.1 * drop), SSnbt(32, 1, 0.1 * drop),
+            DownSampling(32, 32), SSnbt(64, 1, 0.1 * drop), SSnbt(64, 1, 0.1 * drop),
+            DownSampling(64, 64), SSnbt(128, 1, drop), SSnbt(128, 2, drop), SSnbt(128, 5, drop),
+            SSnbt(128, 9, drop), SSnbt(128, 2, drop), SSnbt(128, 5, drop), SSnbt(128, 9, drop), SSnbt(128, 17, drop)
         )
         self.decoder = APN(128, nclass)
 
@@ -24,6 +24,7 @@ class LEDNet(nn.Module):
 if __name__ == '__main__':
     net = LEDNet(21)
     import torch
+
     a = torch.randn(2, 3, 554, 253)
     out = net(a)
     print(out.shape)
