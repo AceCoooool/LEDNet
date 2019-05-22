@@ -14,23 +14,23 @@ This is an unofficial implement of  [LEDNet](https://arxiv.org/abs/1905.02423).
 
 - Base Size 1024, Crop Size 768, only fine. (old-version, without dropout)
 
-| Model  | Paper | OHEM | Epoch | val (crop)  |     val     |
-| :----: | :---: | :--: | :---: | :---------: | :---------: |
-| LEDNet |   /   |  ✗   |  240  | 44.67/91.85 | 49.79/91.31 |
-| LEDNet |   /   |  ✗   | 1000  | 53.77/93.45 | 59.04/93.27 |
+| Model  | Paper | OHEM |   lr   | Epoch | val (crop)  |     val     |
+| :----: | :---: | :--: | :----: | :---: | :---------: | :---------: |
+| LEDNet |   /   |  ✗   | 0.0001 |  240  | 44.67/91.85 | 49.79/91.31 |
+| LEDNet |   /   |  ✗   | 0.0001 | 1000  | 53.77/93.45 | 59.04/93.27 |
 
 - Base Size 1356, Crop Size 1024, only fine. (old-version, without dropout)
 
-| Model  | Paper | OHEM | Epoch | val (crop)  | val  |
-| :----: | :---: | :--: | :---: | :---------: | :--: |
-| LEDNet |   /   |  ✗   | 1000  | 56.30/93.90 |      |
+| Model  | Paper | OHEM |   lr   | Epoch | val (crop)  | val  |
+| :----: | :---: | :--: | :----: | :---: | :---------: | :--: |
+| LEDNet |   /   |  ✗   | 0.0001 | 1000  | 56.30/93.90 |      |
 
 - Height 1024, Width 512. (new-version)
 
-| Model  | Paper | OHEM | Epoch | val (crop)  |     val     |
-| :----: | :---: | :--: | :---: | :---------: | :---------: |
-| LEDNet |   /   |  ✗   |  300  | 39.03/88.60 | 21.17/72.79 |
-| LEDNet |   /   |  ✗   |  800  | 41.70/89.46 |             |
+| Model  | Paper | OHEM | Drop-rate |   lr   | Epoch | val (crop)  |     val     |
+| :----: | :---: | :--: | :-------: | :----: | :---: | :---------: | :---------: |
+| LEDNet |   /   |  ✗   |    0.1    | 0.0001 |  300  | 39.03/88.60 | 21.17/72.79 |
+| LEDNet |   /   |  ✗   |    0.1    | 0.0001 |  800  | 41.70/89.46 |             |
 
 #### new version (with dropout)
 
@@ -39,11 +39,14 @@ This is an unofficial implement of  [LEDNet](https://arxiv.org/abs/1905.02423).
 | Model  | Paper | OHEM | Drop-rate |   lr   | Epoch | val (crop)  |     val     |
 | :----: | :---: | :--: | :-------: | :----: | :---: | :---------: | :---------: |
 | LEDNet |   /   |  ✗   |    0.1    | 0.0005 |  800  | 60.32/94.51 | 66.29/94.40 |
-| LEDNet |   /   |  ✗   |    0.3    | 0.0005 |  800  |             |             |
+| LEDNet |   /   |  ✗   |    0.3    | 0.0005 |  800  | 59.30/94.32 | 65.29/94.11 |
+| LEDNet |   /   |  ✗   |    0.1    | 0.001  |  400  |             |             |
 
 > The paper only provide the test results: 69.2/86.8 (class mIoU/category mIoU)
 >
 > - reference the [Fast-SCNN](), we choose epoch=1000 (here we use 800)
+
+TODO: test larger learning rate (in other models, using learning rate 0.1)
 
 ##  Demo
 
