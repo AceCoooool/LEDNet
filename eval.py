@@ -34,7 +34,7 @@ def parse_args():
                         help='crop image size')
 
     parser.add_argument('--pretrained', type=str,
-                        default='./LEDNet_iter_036800.pth',
+                        default=os.path.expanduser('~/cbb/own/pretrained/seg/lednet/LEDNet_final.pth'),
                         help='Default Pre-trained model root.')
 
     # device

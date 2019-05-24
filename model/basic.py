@@ -42,6 +42,38 @@ class DownSampling(nn.Module):
         return x
 
 
+class SSnbtv2(nn.Module):
+    def __init__(self, channel, dilate=1, drop_prob=0.01):
+        super(SSnbtv2, self).__init__()
+        channel = channel // 2
+        self.left = nn.Sequential(
+            nn.Conv2d(channel, channel, (3, 1), (1, 1), (1, 0)), nn.ReLU(inplace=True),
+            nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, 1), bias=False),
+            nn.BatchNorm2d(channel), nn.ReLU(inplace=True),
+            nn.Conv2d(channel, channel, (3, 1), (1, 1), (dilate, 0), dilation=(dilate, 1)),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, dilate), dilation=(1, dilate), bias=False),
+            nn.BatchNorm2d(channel), nn.Dropout2d(drop_prob, inplace=True)
+        )
+        self.right = nn.Sequential(
+            nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, 1)), nn.ReLU(inplace=True),
+            nn.Conv2d(channel, channel, (3, 1), (1, 1), (1, 0), bias=False),
+            nn.BatchNorm2d(channel), nn.ReLU(inplace=True),
+            nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, dilate), dilation=(1, dilate)),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(channel, channel, (3, 1), (1, 1), (dilate, 0), dilation=(dilate, 1), bias=False),
+            nn.BatchNorm2d(channel), nn.Dropout2d(drop_prob, inplace=True)
+        )
+
+    def forward(self, x):
+        x1, x2 = x.split(x.shape[1] // 2, 1)
+        x1 = self.left(x1)
+        x2 = self.right(x2)
+        out = torch.cat([x1, x2], 1)
+        x = F.relu(out + x)
+        return channel_shuffle(x, 2)
+
+
 class SSnbt(nn.Module):
     def __init__(self, channel, dilate=1, drop_prob=0.01):
         super(SSnbt, self).__init__()
@@ -53,8 +85,7 @@ class SSnbt(nn.Module):
             nn.Conv2d(channel, channel, (3, 1), (1, 1), (dilate, 0), dilation=(dilate, 1)),
             nn.ReLU(inplace=True),
             nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, dilate), dilation=(1, dilate), bias=False),
-            nn.BatchNorm2d(channel), nn.ReLU(inplace=True),
-            nn.Dropout2d(drop_prob)
+            nn.BatchNorm2d(channel), nn.ReLU(inplace=True), nn.Dropout2d(drop_prob, inplace=True)
         )
         self.right = nn.Sequential(
             nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, 1)), nn.ReLU(inplace=True),
@@ -63,8 +94,7 @@ class SSnbt(nn.Module):
             nn.Conv2d(channel, channel, (1, 3), (1, 1), (0, dilate), dilation=(1, dilate)),
             nn.ReLU(inplace=True),
             nn.Conv2d(channel, channel, (3, 1), (1, 1), (dilate, 0), dilation=(dilate, 1), bias=False),
-            nn.BatchNorm2d(channel), nn.ReLU(inplace=True),
-            nn.Dropout2d(drop_prob)
+            nn.BatchNorm2d(channel), nn.ReLU(inplace=True), nn.Dropout2d(drop_prob, inplace=True)
         )
 
     def forward(self, x):
