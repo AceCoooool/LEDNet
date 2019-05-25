@@ -42,9 +42,9 @@ class DownSampling(nn.Module):
         return x
 
 
-class SSnbtv2(nn.Module):
+class SSnbt(nn.Module):
     def __init__(self, channel, dilate=1, drop_prob=0.01):
-        super(SSnbtv2, self).__init__()
+        super(SSnbt, self).__init__()
         channel = channel // 2
         self.left = nn.Sequential(
             nn.Conv2d(channel, channel, (3, 1), (1, 1), (1, 0)), nn.ReLU(inplace=True),
@@ -74,9 +74,9 @@ class SSnbtv2(nn.Module):
         return channel_shuffle(x, 2)
 
 
-class SSnbt(nn.Module):
+class SSnbtv2(nn.Module):
     def __init__(self, channel, dilate=1, drop_prob=0.01):
-        super(SSnbt, self).__init__()
+        super(SSnbtv2, self).__init__()
         channel = channel // 2
         self.left = nn.Sequential(
             nn.Conv2d(channel, channel, (3, 1), (1, 1), (1, 0)), nn.ReLU(inplace=True),
